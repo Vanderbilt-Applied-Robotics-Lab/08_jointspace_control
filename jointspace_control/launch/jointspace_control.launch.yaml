@@ -1,0 +1,20 @@
+## Main launch file for take-home assignment 08
+# Applied Robotics
+
+launch:    
+    - node:
+        pkg: 'tf2_ros'
+        exec: 'static_transform_publisher'
+        name: 'static_transform_publisher'
+        args: '--x 0.183429 --y -0.094068   --z 0.318657 --qx -0.5575 --qy -0.4137 --qz -0.2835 --qw 0.6616 --frame-id meca_base_link --child-frame-id target_frame_1'
+
+    - node:
+        pkg: 'tf2_ros'
+        exec: 'static_transform_publisher'
+        name: 'static_transform_publisher'
+        args: '--x -0.140429 --y 0.015515 --z 0.384672  --qx 0.4276 --qy -0.0974 --qz 0.8742 --qw -0.2087 --frame-id meca_base_link --child-frame-id target_frame_2'
+
+    - node:
+        pkg: 'jointspace_control'
+        exec: 'jointspace_control'
+        name: 'jointspace_control'
