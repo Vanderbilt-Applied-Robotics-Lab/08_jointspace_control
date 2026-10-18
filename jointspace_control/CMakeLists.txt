@@ -27,3 +27,5 @@ install(TARGETS jointspace_control
 install(DIRECTORY launch
   DESTINATION share/${PROJECT_NAME}
 )
+
+ament_package()
